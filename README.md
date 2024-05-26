@@ -47,7 +47,7 @@ The following workspace settings are defined in `.vscode/settings.json`:
 - `"ltex.additionalRules.enablePickyRules": true` - enables warnings for picky rules such as passive voice or sentence length.
 - `"ltex.checkFrequency": "edit"` - will check spelling and grammar while you are typing. If you want you can set this value to `save`, if you only want to check after you saved the file.
 - `"latex-workshop.docker.enabled": true` - enables to docker mode of the `latex-workshop` extension. Thus, no local installation of LaTeX is needed, since it will use docker to build the thesis.
-- `"latex-workshop.docker.image.latex": "kaestner/latex"` - defines the docker image, which is used to build the thesis using the `latex-workshop` extension. This will be [kaestner/latex](https://hub.docker.com/repository/docker/kaestner/latex)
+- `"latex-workshop.docker.image.latex": "ghcr.io/felix-kaestner/latex:1.0"` - defines the docker image, which is used to build the thesis using the `latex-workshop` extension. This will be [felix-kaestner/latex](https://github.com/felix-kaestner/latex)
 - `"latex-workshop.latex.autoBuild.run": "never"` - disables automatic runs of the `latex-workshop` extension. You can manually trigger a build by using the command prompt in VS Code or by clicking on the Play-Button in the top right.
 
 ### Explanation
@@ -56,4 +56,4 @@ Instead of keeping a local copy of LaTeX, this repository simplifies the process
 
 In order to avoid user permission problems, you build a custom docker image _once_ in advance, which will create a user which has the same name and user ID as your local user on your machine. As a result there will be no problems, since the files will have the correct permissions set.
 
-This repository uses [kaestner/latex](https://hub.docker.com/repository/docker/kaestner/latex) as the base docker image which is created by [Felix Kästner](https://felix-kaestner.com) over [here](https://github.com/felix-kaestner/latex). This image is only 1.3GB in size, which results in faster build times using the CI.
+This repository uses [felix-kaestner/latex](https://github.com/felix-kaestner/latex) as the base docker image which is created by [Felix Kästner](https://felix-kaestner.com) over [here](https://github.com/felix-kaestner/latex). This image is only 1.3GB in size, which results in faster build times using the CI.
