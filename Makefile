@@ -4,24 +4,8 @@ DIR:=$(shell sh -c "pwd")
 USER_ID:=$(shell sh -c "id -u")
 USER_NAME:=$(shell sh -c "id -u -n")
 USER_HOME:=/home/latex
-BASE_IMAGE:=ghcr.io/felix-kaestner/latex:1.0 
+BASE_IMAGE:=ghcr.io/felix-kaestner/latex:1.0
 DOCKER_IMAGE:=mustermann/latex
-
-# Check if any of the args are empty.
-ifndef DIR
-$(error DIR is undefined)
-endif
-ifndef USER_ID
-$(error USER_ID is undefined)
-endif
-ifndef USER_NAME
-$(error USER_NAME is undefined)
-endif
-
-# Log all variables.
-$(info DIR is $(DIR))
-$(info USER_ID is $(USER_ID))
-$(info USER_NAME is $(USER_NAME))
 
 .PHONY: all
 
